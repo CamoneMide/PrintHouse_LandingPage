@@ -29,7 +29,6 @@ body{
         align-items: center;
     }
     
-
     .menuLite{
         z-index: 5;
         position: fixed;
@@ -45,7 +44,7 @@ body{
         &.active{
             left: 0;
             opacity: 1;
-        }
+        } 
 
         a{
             color: #333;
@@ -369,68 +368,81 @@ body{
             grid-gap: 40px;
         }
 
+        
+
         .showcase1{
+            z-index: 0;
             margin-top: 40px;
             background: #fce400;
             border: 1px solid #fce400;
             border-radius: 15px;
-            display: flex;
-            flex-direction: column;
             box-shadow: 0px 3px 20px rgba(0, 0, 0,0.1);
 
-            .search{
+            .showsst{
+                z-index: 1;
+                background: url('https://www.printhouse.ng/img/bg-dots.svg') no-repeat center center/cover;
+                height: 100%;
+                width: 100%;
                 display: flex;
-                flex-direction: row;
-                align-self: center;
-                justify-content: center;
-                margin: 50px 0;
-                width: 88%;
-                // padding: 10px 40px;
-                border: 1px solid transparent;
-                border-radius: 6px;
+                flex-direction: column;
 
-                input{
-                    width: 100%;
+                .search{
+                    z-index: 2;
                     display: flex;
-                    justify-content: flex-start;
-                    text-align: start;
-                    font-size: 10px;
-                    margin-right: 0;
-                    padding: 20px 60px 20px 20px;
-                    outline: none;
-                    border: none;
-                    border-radius: 4px;
-                    border-top-right-radius:0;
-                    border-bottom-right-radius: 0;
+                    flex-direction: row;
+                    align-self: center;
+                    justify-content: center;
+                    margin: 50px 0;
+                    width: 88%;
+                    // padding: 10px 40px;
+                    border: 1px solid transparent;
+                    border-radius: 6px;
+    
+                    input{
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        text-align: start;
+                        font-size: 10px;
+                        margin-right: 0;
+                        padding: 20px 60px 20px 20px;
+                        outline: none;
+                        border: none;
+                        border-radius: 4px;
+                        border-top-right-radius:0;
+                        border-bottom-right-radius: 0;
+                    }
+    
+                    i{
+                        font-size: 18px;
+                        margin-left: 0;
+                        padding: 20px 24px;
+                        color: #fff;
+                        background: #000;
+                        border: none;
+                        border-radius: 4px;
+                        border-top-left-radius:0;
+                        border-bottom-left-radius: 0;
+                    }
                 }
 
-                i{
-                    font-size: 18px;
-                    margin-left: 0;
-                    padding: 20px 24px;
-                    color: #fff;
-                    background: #000;
-                    border: none;
-                    border-radius: 4px;
-                    border-top-left-radius:0;
-                    border-bottom-left-radius: 0;
+                .stext{
+                    z-index: 2;
+                    width: 88%;
+                    margin: auto;
+                    h2{
+                        font-size: 44px;
+                        font-weight: 600;
+                    }
+                    p{
+                        color: #353535;
+                        font-size: 18px;
+                        line-height: 1.6em;
+                        margin: 40px 0;
+                        
+                    }
                 }
-            }
-
-            .stext{
-                width: 88%;
-                margin: auto;
-                h2{
-                    font-size: 44px;
-                    font-weight: 600;
-                }
-                p{
-                    color: #353535;
-                    font-size: 18px;
-                    line-height: 1.6em;
-                    margin: 40px 0;
-                    
-                }
+                
             }
         }
 
@@ -900,10 +912,15 @@ body{
             position: fixed;
             z-index: 4;
             box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.12);
-            bottom: 10%;
-            right: 4%;
+            bottom: 8%;
+            right: 6%;
+            padding: 7px 10px 8px 12px;
+            border: 1px solid #fff;
+            border-radius: 30px 0 30px 30px;
+            background: #fff;
            
             a{
+                display: none;
                 font-size: 16px;
                 color: #062311;
                 background: #25D366;
@@ -911,10 +928,16 @@ body{
                 border: 2px solid #25D366;
                 border-radius: 25px;
             }
-    
-            i{
-                color: #FFF;
-                font-size: 24px;
+
+            .contCi{
+                display: flex;
+                justify-self: center;
+                i{
+                    font-size: 28px;
+                    background: #fff;
+                    color: #25D366;
+                    padding: 0;
+                }
             }
         }
     }
@@ -1013,6 +1036,388 @@ body{
                     border: 1px solid #111;
                     border-radius: 4px;
             
+                }
+            }
+        }
+    }
+
+    .hire{
+        z-index: 0;
+        background: #FFF;
+        padding: 40px 0;
+
+        .hireT{
+            z-index: 0;
+            background: url('https://www.printhouse.ng/img/hire-bg-1.svg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            h2{
+                z-index: 1;
+                flex-wrap: wrap;
+                font-size: 50px;
+                font-weight: 600;
+                margin-bottom: 20px;
+                padding: 60px 40px 10px 40px;
+            }
+
+            p{
+                z-index: 1;
+                flex-wrap: wrap;
+                font-size: 20px;
+                color: #353535;
+                padding: 10px 40px 100px 40px;
+            }
+        }
+
+    }
+
+    .hireF{
+        background: url("https://www.printhouse.ng/img/footer-bg.svg") no-repeat center center/cover;
+
+        .hireforcs{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+        }
+
+        .container{
+            .hiref{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-top: 0;
+
+                .hirefi{
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    padding: 20px;
+                    width: 100%;
+                    background: #FFF;
+                    margin: 20px 0;
+                    border: 2px solid #fff;
+                    border-radius: 15px;
+
+                    .srap{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        text-align: center;
+                        justify-content: space-between;
+                        align-items: center;
+                        flex-wrap: nowrap;
+                        padding: 10px;
+                    }
+
+                    .srap1{
+                        p{
+                            font-size: 12px;
+                            font-weight: 600;
+                        }
+                      
+                    }
+
+                    p{
+                        font-size: 12px;
+                        color: #495057;
+                       
+                    }
+
+                    select {
+                        width: 100%;
+                        margin-left: 30px;
+                        font-size: 12px;
+                        // padding: 10px;
+                        padding: 12.5px 36px 12.5px 14px;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        background-color: #fff;
+                        color: #495057;
+                        // outline: none;
+                        appearance: none;
+                        background: url("../Images/arrow\ 2\ bg.png") no-repeat;
+                        background-size: 4%;
+                        background-position: right 10px center;
+
+                        option{
+                            padding: 12.5px 36px 12.5px 14px; 
+                            font-size: 14px;
+                        }
+                      }
+                      
+                      select:hover {
+                        background-color: #f2f2f2;
+                      }
+                      
+                      select:focus {
+                        outline: none;
+                        border-color: #999;
+                      }
+
+                    i{
+                        font-size: 22px;
+                        background: transparent;
+                        color: #495057;
+        
+                    }
+                }
+
+                .hireS{
+                    display: flex;
+                    justify-content: flex-start;
+                    text-align: left;
+                    width: 100%;
+                    padding: 20px 30px 30px 30px;
+                    background: #FFF;
+                    border: 2px solid #fff;
+                    border-radius: 15px;
+
+                    p{
+                        color: #353535;
+                        font-size: 16px;
+                    }
+
+                    .total{
+                        font-size: 13px;
+                        font-weight: 600;
+                        margin-left: 20px;
+                    }
+
+                }
+            }
+
+            .hiref1{
+                display: flex;
+                flex-direction: column;
+
+                .pcontlink{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    color: #FFF;
+                    font-size: 12px;
+                    background: #000;
+                    border: 2px solid #000;
+                    border-radius: 25px;
+                    padding: 12px 24px;
+                    margin: 4px 0 40px 0;
+
+                    i{
+                        margin-left: 6px;
+                        font-size: 20px;
+                    }
+                }
+        
+                .hirefpr{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    background: #F8D7DA;
+                    border: 1px solid #F8D7DA;
+                    border-radius: 5px;
+                    color: #721C24;
+                    padding: 8px 16px 8px 8px;
+                    margin: 20px 0 10px 0;
+                    font-size: 14px;
+
+                    img{
+                        width: 20%;
+                        padding: 10px;
+                    }    
+                }
+
+                .hirefinp{
+                    background: #FFF;
+                    border: 1px solid #FFF;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 12px;
+                    padding: 30px 20px;
+                    margin: 0 0 20px 0;
+
+                    textarea{
+                        margin: 6px 0 30px 0;
+                        padding: 8px;
+                        font-size: 12px;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                    }
+
+                    .upload{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        text-align: center;
+                        align-items: center;
+                        padding: 10px;
+                        background: #f3f4f5;
+                        border: 1px solid #f3f4f5;
+                        border-radius: 6px;
+                        margin: 0 0 20px 0;
+
+                        p{
+                            padding: 5px;
+                            color: #353535;
+                            font-size: 16px;
+                            margin: 10px 0;
+                        }
+
+                        a{
+                            align-items: center;
+                            padding: 12px 24px;
+                            font-size: 12px;
+                            border: 2px solid #000;
+                            border-radius: 25px;
+                            transition: all ease-in-out 0.8s;
+                        }
+
+                        a:hover{
+                            background: #000;
+                            color: #FFF;
+                        }
+
+                        i{
+                            font-size: 14px;
+                            margin-right: 4px;
+                        }
+                    }
+
+                    .print{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        img{
+                            width: 60%;
+                            margin: 0 20px 0 0;
+                        }
+
+                        a{
+                            font-size: 16px;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .container{
+        h1{
+            font-size: 30px;
+            margin: 20px 0;
+        }
+
+        p{
+            font-size: 16px;
+            color: #353535;
+            margin-bottom: 10px;
+        }
+
+        .qforminp1{
+
+            a{
+                color: #6C6B6B;
+                font-size: 16px;
+                text-decoration: underline;
+            }
+            p{
+                color: #353535;
+                font-size: 13px;
+            }
+        }
+
+        .qform{
+            display: flex;
+            flex-direction: column;
+            background: #FFF;
+            border: 1px solid #FFF;
+            border-radius: 5px;
+            box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.12);
+            padding: 20px;
+            margin-bottom: 40px;
+
+            .qforminp{
+                display: flex;
+                flex-direction: column;
+                margin: 12px 0;
+                h4{
+                    color: #010101;
+                    font-size: 20px;
+                    margin-bottom: 6px;
+                }
+
+                input{
+                    outline: none;
+                    border: 1px solid #cdcdcd;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    padding: 13px 40px 13px 12px;
+                    width: 100%;
+                    transition: all ease-in-out 0.4s;
+                }
+
+                input:focus{
+                    border: 2px solid #212121;
+                }
+
+                textarea{
+                    outline: none;
+                    border: 1px solid #cdcdcd;
+                    border-radius: 5px;
+                    font-size: 12px;
+                    padding: 13px 0 13px 12px;
+                    width: 100%;
+                    transition: all ease-in-out 0.4s;
+                }
+
+                textarea:focus{
+                    border: 2px solid #212121;
+                }
+
+                .qradio{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    text-align: center;
+                    input{
+                        width: 5%;
+                        padding: 0;
+                        margin-right: 6px;
+                    }
+
+                    p{
+                        font-size: 12px;
+                        margin-right: 12px;
+                    }
+                }
+            }
+
+            button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                font-size: 12px;
+                margin: 24px 10%;
+                padding: 14px 20px;
+                width: 80%;
+                color: #FFF;
+                background: #000;
+                border: 1px solid #000;
+                border-radius: 25px;
+
+                i{
+                    color: #FFF;
+                    font-size: 18px;
+                    margin-left: 6px;
                 }
             }
         }
@@ -1123,6 +1528,12 @@ body{
     }
     
     @media(min-width:840px){
+        .hireF{
+            .hireforcs{
+                grid-template-columns: 2fr 3fr;
+                grid-gap: 20px;
+            }
+        }
         .partn{
             .container{
                 .partnSp{
@@ -1139,29 +1550,31 @@ body{
                 grid-gap: 30px;
             }
 
-            .showcase1{
-                .search{
-                    input{
-                        font-size: 14px;
+            .showsst{
+                .showcase1{
+                    .search{
+                        input{
+                            font-size: 14px;
+                        }
                     }
+                    .stext{
+                        h2{
+                            font-size: 60px;
+                        }
+                        p{
+                            font-size: 25px;
+                           word-spacing: 0.2rem;
+                        }
+                    }   
                 }
-                .stext{
-                    h2{
-                        font-size: 60px;
-                    }
-                    p{
-                        font-size: 25px;
-                       word-spacing: 0.2rem;
-                    }
-                }   
             }
 
             .showcase2{
                 margin-top: 20px;
 
-                img{
-                    height: 700px;
-                }
+                // img{
+                //     height: 700px;
+                // }
 
                 .ashow{
                     bottom: 45px;
@@ -1217,6 +1630,45 @@ body{
                 }
             }
         }
+
+        .contC{
+            .chatW{
+                position: fixed;
+                z-index: 4;
+                box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.12);
+                bottom: 10%;
+                right: 4%;
+                padding: 0;
+                border: none;
+                border-radius: 0;
+                background: none;
+               
+                a{
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    align-items: center;
+                    font-size: 16px;
+                    color: #062311;
+                    background: #25D366;
+                    padding: 18px 22px;
+                    border: 2px solid #25D366;
+                    border-radius: 25px;
+
+                    i{
+                        color: #FFF;
+                        font-size: 24px;
+                        margin-right: 6px;
+                    }
+                }
+        
+                
+
+                .contCi{
+                    display: none;
+                }
+            }
+        }
     }
     
     @media(min-width:1010px){
@@ -1253,6 +1705,14 @@ body{
 
         .subs{
             width: 80%;
+            padding: 0 20px;
+
+            h2{
+                margin-top: 25px;
+                line-height: 1.5em;
+                font-size: 35px;
+                padding: 0;
+            }
         }
 
         .testi{
