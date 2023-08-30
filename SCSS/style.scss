@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Epilogue', sans-serif;
     color: #000;
@@ -343,7 +347,7 @@ body{
             margin: 40px 0;
             background: #000;
             color: #FFF;
-            padding: 22px;
+            padding: 18px 22px;
             font-size: 14px;
             border: 2px solid #000;
             border-radius: 22px;
@@ -529,39 +533,36 @@ body{
         .events{
             padding-bottom: 100px;
 
-            .event1{
-                .event{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: baseline;
-                    margin: 80px 0;
+            .prodct{
+                margin: 20px 0;
+                .slids{
+                   padding: 20px 10px;
+                    /* display: flex;
+                    flex-direction: row !important;
+                    flex-wrap: wrap !important;
+                    // justify-content: space-between;
+                    justify-content: space-around;
+                    gap: 20px; */
 
-                    h2{
-                        font-size: 40px;
-                        color: #000;
-                    }
-
-                    a{
-                        display: inline-block;
-                    }
-                }
-
-                .slides{
-                    width: 100%;
                     display: grid;
                     grid-template-columns: 1fr;
-                    grid-gap: 40px;
+                    grid-gap: 20px;
+
+
 
                     .slide{
                         position: relative;
                         display: flex;
+                        // flex: 1 1 46%;
+                        // flex-basis: 50%;
                         flex-direction: column;
                         justify-content: flex-start;
                         border: 1px solid transparent;
                         border-radius: 15px;
-                        box-shadow: 1px 3px 20px rgba(0, 0, 0,0.1);
+                        box-shadow: 1px 3px 12px rgba(0, 0, 0,0.1);
                         padding: 10px;
+                        margin: 10px;
+                        // width: 100%;
 
                         img{
                             width: 100%;
@@ -588,8 +589,8 @@ body{
                                 background: #ff0000;
                                 border: 1px solid #ff0000;
                                 border-radius: 15px;
-                                bottom: 80px;
-                                right: 24px;
+                                bottom: 94px;
+                                right: 20px;
 
                                 .inc{
                                     font-size: 16px;
@@ -628,7 +629,115 @@ body{
 
                     }
                 }
+            }
 
+            .event1{
+                overflow: hidden;
+                .event{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: baseline;
+                    margin: 40px 0;
+
+                    h2{
+                        font-size: 40px;
+                        color: #000;
+                    }
+
+                    a{
+                        display: inline-block;
+                    }
+                }
+
+                .swiper{
+                    .slides{
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+
+                        .swiper-slide{
+                            padding: 20px 14px 60px 14px;
+
+                            .slide{
+                                position: relative;
+                                display: flex;
+                                flex: 0 0 100%;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                border: 1px solid transparent;
+                                border-radius: 15px;
+                                box-shadow: 1px 3px 12px rgba(0, 0, 0,0.1);
+                                padding: 10px;
+                                width: 100%;
+        
+                                img{
+                                    width: 100%;
+                                    border-radius: 12px 12px 0px 0px;
+                                    // border-radius: none;
+                                }
+        
+                                .rsw{
+                                    width: 86%;
+                                    margin: auto;
+                                    margin: 10px auto;
+        
+                                    h3{
+                                        margin: 10px 0;
+                                        font-size: 18px;
+                                        font-weight: 600;
+                                    }
+        
+                                    .min{
+                                        position: absolute;
+                                        padding: 6px 12px;
+                                        font-size: 12px;
+                                        color: #FFF;
+                                        background: #ff0000;
+                                        border: 1px solid #ff0000;
+                                        border-radius: 15px;
+                                        bottom: 94px;
+                                        right: 20px;
+        
+                                        .inc{
+                                            font-size: 16px;
+                                            color: #FFF;
+                                        }
+                                    }
+        
+        
+                                    .pts{
+                                        display: flex;
+                                        flex-direction: row;
+                                        justify-content: space-between;
+                                        margin: 10px 0 12px 0;
+        
+                                        p{
+                                            font-size: 14px;
+                                            color: #696969;
+                                        }
+        
+                                        a{
+                                            position: absolute;
+                                            bottom: 40px;
+                                            right: 40px;
+        
+                                            i{
+                                                padding: 2px 4px;
+                                                font-size: 14px;
+                                                font-weight: 800;
+                                                border: 1px solid;
+                                                border-radius: 50px;
+                                            }
+                                        }
+        
+                                    }
+                                }
+        
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -1508,9 +1617,10 @@ body{
 
         .container{
             .events{
-                .event1{
-                    .slides{
+                .prodct{
+                    .slids{
                         grid-template-columns: 1fr 1fr;
+                        grid-gap: 10px;
                     }
                 }
             }
@@ -1577,8 +1687,8 @@ body{
                 // }
 
                 .ashow{
-                    bottom: 45px;
-                    right: 40px;
+                    bottom: 18px;
+                    right: 38px;
                 }
             }
 
@@ -1589,7 +1699,7 @@ body{
                         font-size: 18px;
                         border: none;
                         box-shadow: none;
-                        transition: all ease-in-out 0.5s;
+                        transition: all ease-in-out 0.4s;
                         &.apdl{
                             background: #FFF;
                             border-radius: 4px 4px 0 0;
@@ -1623,8 +1733,8 @@ body{
 
         .container{
             .events{
-                .event1{
-                    .slides{
+                .prodct{
+                    .slids{
                         grid-template-columns: 1fr 1fr 1fr;
                     }
                 }
@@ -1691,9 +1801,9 @@ body{
 
         .container{
             .events{
-                .event1{
-                    .slides{
-                        grid-template-columns: 1fr 1fr 1fr 1fr;
+                .prodct{
+                    .slids{
+                        grid-template-columns: repeat(4, 1fr);
                     }
                 }
             }
